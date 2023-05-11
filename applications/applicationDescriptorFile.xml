@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="solicitud-garantia" version="1.0" profile="User" homePage="solicitud-garantia" state="ACTIVATED" layout="custompage_layoutBonita" theme="custompage_themeBonita">
+        <displayName>Aplicación de trámites de garantía</displayName>
+        <applicationPages>
+            <applicationPage customPage="custompage_SolicitudesGarantia" token="solicitud-garantia"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="solicitud-garantia">
+                <displayName>Seguimiento de los trámites de garantía</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>

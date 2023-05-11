@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="Florentino">
+  <customUserInfoDefinitions/>
+  <users>
+    <user userName="prudencio.mayo">
+      <firstName>Prudencio</firstName>
+      <lastName>Mayo</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="fausto.cuellar">
+      <firstName>Fausto</firstName>
+      <lastName>Cuéllar Segura</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="teodoro.moreno">
+      <firstName>Teodoro</firstName>
+      <lastName>Moreno Ferrando</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="gabriela.larrañaga">
+      <firstName>Gabriela</firstName>
+      <lastName>Larrañaga</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="feliciana.cuervo">
+      <firstName>Feliciana</firstName>
+      <lastName>Cuervo</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="piedad.miro">
+      <firstName>Piedad</firstName>
+      <lastName>Miró Morera</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="carlos.ramirez">
+      <firstName>Carlos</firstName>
+      <lastName>Ramírez</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="victoria.puente">
+      <firstName>Victoria</firstName>
+      <lastName>Puente</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="laura.gomez">
+      <firstName>Laura</firstName>
+      <lastName>Gómez</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="palma.rodriguez">
+      <firstName>Palma</firstName>
+      <lastName>Rodriguez</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="alicia.rodriguez">
+      <firstName>Alicia</firstName>
+      <lastName>Rodríguez</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="gerente">
+      <displayName>Gerente</displayName>
+    </role>
+    <role name="cliente">
+      <displayName>Cliente</displayName>
+    </role>
+    <role name="recepcionista">
+      <displayName>Recepcionista</displayName>
+    </role>
+    <role name="encargado.almacen">
+      <displayName>Encargado de almacén</displayName>
+    </role>
+    <role name="marmolista">
+      <displayName>Marmolista</displayName>
+    </role>
+    <role name="diseñador">
+      <displayName>Diseñador</displayName>
+    </role>
+    <role name="contacto.proveedor">
+      <displayName>Contacto Proveedor</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="clientes" parentPath="/florentino">
+      <displayName>Clientes</displayName>
+    </group>
+    <group name="empleado" parentPath="/empleado">
+      <displayName>Empleado</displayName>
+    </group>
+    <group name="florentino">
+      <displayName>Florentino</displayName>
+    </group>
+    <group name="cocina" parentPath="/florentino">
+      <displayName>Instalación de cocinas</displayName>
+    </group>
+    <group name="ventas" parentPath="/florentino">
+      <displayName>Ventas</displayName>
+    </group>
+    <group name="proveedores" parentPath="/florentino">
+      <displayName>Proveedores</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>carlos.ramirez</userName>
+      <roleName>gerente</roleName>
+      <groupName>florentino</groupName>
+    </membership>
+    <membership>
+      <userName>fausto.cuellar</userName>
+      <roleName>recepcionista</roleName>
+      <groupName>empleado</groupName>
+      <groupParentPath>/empleado</groupParentPath>
+    </membership>
+    <membership>
+      <userName>feliciana.cuervo</userName>
+      <roleName>recepcionista</roleName>
+      <groupName>empleado</groupName>
+      <groupParentPath>/empleado</groupParentPath>
+    </membership>
+    <membership>
+      <userName>gabriela.larrañaga</userName>
+      <roleName>marmolista</roleName>
+      <groupName>cocina</groupName>
+      <groupParentPath>/florentino</groupParentPath>
+    </membership>
+    <membership>
+      <userName>piedad.miro</userName>
+      <roleName>recepcionista</roleName>
+      <groupName>cocina</groupName>
+      <groupParentPath>/florentino</groupParentPath>
+    </membership>
+    <membership>
+      <userName>prudencio.mayo</userName>
+      <roleName>encargado.almacen</roleName>
+      <groupName>empleado</groupName>
+      <groupParentPath>/empleado</groupParentPath>
+    </membership>
+    <membership>
+      <userName>teodoro.moreno</userName>
+      <roleName>contacto.proveedor</roleName>
+      <groupName>proveedores</groupName>
+      <groupParentPath>/florentino</groupParentPath>
+    </membership>
+    <membership>
+      <userName>victoria.puente</userName>
+      <roleName>cliente</roleName>
+      <groupName>florentino</groupName>
+    </membership>
+    <membership>
+      <userName>laura.gomez</userName>
+      <roleName>cliente</roleName>
+      <groupName>florentino</groupName>
+    </membership>
+    <membership>
+      <userName>palma.rodriguez</userName>
+      <roleName>cliente</roleName>
+      <groupName>florentino</groupName>
+    </membership>
+    <membership>
+      <userName>alicia.rodriguez</userName>
+      <roleName>cliente</roleName>
+      <groupName>florentino</groupName>
+    </membership>
+  </memberships>
+</organization:Organization>

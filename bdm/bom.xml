@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.15.0">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.model.Cocina">
+            <fields>
+                <field type="STRING" length="255" name="nombrePedido" nullable="false" collection="false"/>
+                <field type="DOUBLE" length="255" name="tamano" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="tipoSuelo" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="tipoEncimera" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="microondas" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="frigorifico" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="datosAdicionales" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Garantia">
+            <fields>
+                <field type="STRING" length="255" name="nombreProducto" nullable="false" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaCompra" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="garantia" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="solicitanteId" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Pedido">
+            <fields>
+                <field type="STRING" length="255" name="nombreProducto" nullable="false" collection="false"/>
+                <field type="DOUBLE" length="255" name="precio" nullable="false" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaPedido" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="stock" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>
