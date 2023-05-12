@@ -23,7 +23,16 @@
                 <field type="LONG" length="255" name="solicitanteId" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
-            <queries/>
+            <queries>
+                <query name="fechaAceptaciones" content="SELECT g &#13;&#10;FROM Garantia g &#13;&#10;WHERE &#13;&#10;g.fechaCompra = :fechaCompra&#13;&#10;AND g.garantia = true&#13;&#10;ORDER BY g.persistenceId ASC" returnType="com.company.model.Garantia">
+                    <queryParameters>
+                        <queryParameter name="nombreProducto" className="java.lang.String"/>
+                        <queryParameter name="fechaCompra" className="java.time.LocalDate"/>
+                        <queryParameter name="garantia" className="java.lang.Boolean"/>
+                        <queryParameter name="solicitanteId" className="java.lang.Long"/>
+                    </queryParameters>
+                </query>
+            </queries>
             <indexes/>
         </businessObject>
         <businessObject qualifiedName="com.company.model.Pedido">
@@ -34,7 +43,15 @@
                 <field type="BOOLEAN" length="255" name="stock" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
-            <queries/>
+            <queries>
+                <query name="Pedidop" content="SELECT p&#13;&#10;FROM Pedido p &#13;&#10;WHERE p.nombreProducto = 'Mesa'&#13;&#10;AND p.fechaPedido = '2023-05-05'&#13;&#10;ORDER BY p.persistenceId ASC" returnType="com.company.model.Pedido">
+                    <queryParameters>
+                        <queryParameter name="nombreProducto" className="java.lang.String"/>
+                        <queryParameter name="fechaPedido" className="java.time.LocalDate"/>
+                        <queryParameter name="solicitanteId" className="java.lang.Long"/>
+                    </queryParameters>
+                </query>
+            </queries>
             <indexes/>
         </businessObject>
     </businessObjects>

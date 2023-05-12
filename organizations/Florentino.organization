@@ -124,14 +124,17 @@
     <group name="florentino">
       <displayName>Florentino</displayName>
     </group>
-    <group name="cocina" parentPath="/florentino">
+    <group name="cocina" parentPath="/florentino/Grupo1">
       <displayName>Instalación de cocinas</displayName>
     </group>
-    <group name="ventas" parentPath="/florentino">
+    <group name="ventas" parentPath="/florentino/Grupo1">
       <displayName>Ventas</displayName>
     </group>
     <group name="proveedores" parentPath="/florentino">
       <displayName>Proveedores</displayName>
+    </group>
+    <group name="Grupo1" parentPath="/florentino">
+      <displayName>Empleados</displayName>
     </group>
   </groups>
   <memberships>
@@ -156,13 +159,13 @@
       <userName>gabriela.larrañaga</userName>
       <roleName>marmolista</roleName>
       <groupName>cocina</groupName>
-      <groupParentPath>/florentino</groupParentPath>
+      <groupParentPath>/florentino/Grupo1</groupParentPath>
     </membership>
     <membership>
       <userName>piedad.miro</userName>
       <roleName>recepcionista</roleName>
       <groupName>cocina</groupName>
-      <groupParentPath>/florentino</groupParentPath>
+      <groupParentPath>/florentino/Grupo1</groupParentPath>
     </membership>
     <membership>
       <userName>prudencio.mayo</userName>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_KnQaUPAIEe23Hp0drSdkXA" name="MiDiagrama" bonitaModelVersion="7.12.0-004">
-    <elements xmi:type="process:Pool" xmi:id="_KnQaUfAIEe23Hp0drSdkXA" name="TramiteGarantia">
+    <elements xmi:type="process:Pool" xmi:id="_KnQaUfAIEe23Hp0drSdkXA" documentation="Proceso de tramite de garantías para su aceptación o denegación." name="TramiteGarantia">
       <elements xmi:type="process:Lane" xmi:id="_KnQaUvAIEe23Hp0drSdkXA" name="Solicitante" actor="_uqydgPAJEe23Hp0drSdkXA">
         <elements xmi:type="process:StartEvent" xmi:id="_KnQaU_AIEe23Hp0drSdkXA" name="Inicio de Trámite" outgoing="_KnQaaPAIEe23Hp0drSdkXA">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_KnQaVPAIEe23Hp0drSdkXA" name="" content="" returnTypeFixed="true"/>
@@ -173,7 +173,7 @@
         </elements>
       </elements>
       <elements xmi:type="process:Lane" xmi:id="_H7HuwPAJEe23Hp0drSdkXA" name="Recepcionista" actor="_H72N4PAREe23Hp0drSdkXA">
-        <elements xmi:type="process:Task" xmi:id="_KnQaV_AIEe23Hp0drSdkXA" name="Validar tramite" outgoing="_3vP9EPAIEe23Hp0drSdkXA" incoming="_KnQaaPAIEe23Hp0drSdkXA" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_KnQaV_AIEe23Hp0drSdkXA" name="Validar tramite" outgoing="_3vP9EPAIEe23Hp0drSdkXA" incoming="_KnQaaPAIEe23Hp0drSdkXA" actor="_H72N4PAREe23Hp0drSdkXA" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_KnQaWPAIEe23Hp0drSdkXA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_KnQaWfAIEe23Hp0drSdkXA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_KnQaWvAIEe23Hp0drSdkXA" name="" content="" returnTypeFixed="true"/>
@@ -194,10 +194,10 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_KnQaXvAIEe23Hp0drSdkXA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_KnQaX_AIEe23Hp0drSdkXA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <BoundaryIntermediateEvents xmi:type="process:NonInterruptingBoundaryTimerEvent" xmi:id="_sdLGsPAaEe2pnIEa4TJmiQ" name="Recordatorio" outgoing="_G_YaEPAbEe24POuEIey1fQ">
-            <condition xmi:type="expression:Expression" xmi:id="_7G4iEPAaEe24POuEIey1fQ" name="00:00:03" content="3000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
+            <condition xmi:type="expression:Expression" xmi:id="_7G4iEPAaEe24POuEIey1fQ" name="03:00:00" content="10800000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
           </BoundaryIntermediateEvents>
           <formMapping xmi:type="process:FormMapping" xmi:id="_KnQaYPAIEe23Hp0drSdkXA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_BwdNMPASEe23Hp0drSdkXA" name="newForm1" content="d19105a0-b878-4308-a24a-5f9f0c0cf4a6" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_BwdNMPASEe23Hp0drSdkXA" name="formularioAceptacionGarantia" content="d19105a0-b878-4308-a24a-5f9f0c0cf4a6" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_KnQaYvAIEe23Hp0drSdkXA">
             <inputs xmi:type="process:ContractInput" xmi:id="_Yb1D0PAQEe23Hp0drSdkXA" name="solicitudInput" type="COMPLEX" dataReference="solicitud" createMode="false">
@@ -277,16 +277,25 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_G_Thl_AbEe24POuEIey1fQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_G_ThlvAbEe24POuEIey1fQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
+        <filters xmi:type="process:ActorFilter" xmi:id="_9JGhkPBTEe2jZp2fPReBtA" name="feliciana" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
+          <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_9JGhkfBTEe2jZp2fPReBtA" definitionId="bonita-actorfilter-single-user" version="1.0.0">
+            <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9JGhkvBTEe2jZp2fPReBtA" key="userId">
+              <expression xmi:type="expression:Expression" xmi:id="_9JGhk_BTEe2jZp2fPReBtA" name="userId()" content="return apiAccessor.getIdentityAPI().getUserByUserName(&quot;feliciana.cuervo&quot;).getId()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long" returnTypeFixed="true">
+                <referencedElements xmi:type="expression:Expression" xmi:id="_9JGhlPBTEe2jZp2fPReBtA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+              </expression>
+            </parameters>
+          </configuration>
+        </filters>
       </elements>
       <data xmi:type="process:BusinessObjectData" xmi:id="_hEW1UPAPEe23Hp0drSdkXA" name="solicitud" dataType="_KnQahPAIEe23Hp0drSdkXA" className="com.company.model.Garantia">
         <defaultValue xmi:type="expression:Expression" xmi:id="_n-xpw_APEe23Hp0drSdkXA" name="initSolicitud()" content="import org.bonitasoft.engine.identity.UserNotFoundException&#xD;&#xA;&#xD;&#xA;def garantiaVar = new com.company.model.Garantia()&#xD;&#xA;garantiaVar.nombreProducto = solicitudInput?.nombreProducto&#xD;&#xA;garantiaVar.fechaCompra = solicitudInput?.fechaCompra&#xD;&#xA;try{&#xD;&#xA;&#x9;def processInitiator = apiAccessor.getIdentityAPI().getUser(apiAccessor.getProcessAPI()&#xD;&#xA;&#x9;&#x9;&#x9;.getProcessInstance(processInstanceId)&#xD;&#xA;&#x9;&#x9;&#x9;.getStartedBy())&#xD;&#xA;&#x9;&#x9;&#x9;garantiaVar.solicitanteId = processInitiator.id&#xD;&#xA;}catch(UserNotFoundException e){&#xD;&#xA;&#x9;// Handle UserNotFoundException here&#xD;&#xA;&#x9;// Was the process started by the system (e.g.: a start event) ?&#xD;&#xA;&#x9;// Has the user who started the process instance been deleted ?&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return garantiaVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Garantia">
-          <referencedElements xmi:type="process:ContractInput" xmi:id="_xK40APAPEe23Hp0drSdkXA" name="solicitudInput" type="COMPLEX"/>
-          <referencedElements xmi:type="expression:Expression" xmi:id="_xK40AfAPEe23Hp0drSdkXA" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
-          <referencedElements xmi:type="expression:Expression" xmi:id="_xK40AvAPEe23Hp0drSdkXA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
+          <referencedElements xmi:type="process:ContractInput" xmi:id="_lnYrEPBQEe2jZp2fPReBtA" name="solicitudInput" type="COMPLEX"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_lnYrEfBQEe2jZp2fPReBtA" name="processInstanceId" content="processInstanceId" type="TYPE_ENGINE_CONSTANT" returnType="java.lang.Long"/>
+          <referencedElements xmi:type="expression:Expression" xmi:id="_lnYrEvBQEe2jZp2fPReBtA" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
         </defaultValue>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_KnQaZPAIEe23Hp0drSdkXA">
-        <targetForm xmi:type="expression:Expression" xmi:id="_VUUD0PAREe23Hp0drSdkXA" name="newForm" content="17124c5c-810b-4e65-9b54-4469d5a784aa" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_VUUD0PAREe23Hp0drSdkXA" name="formularioTramiteGarantia" content="17124c5c-810b-4e65-9b54-4469d5a784aa" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_KnQaZvAIEe23Hp0drSdkXA">
         <targetForm xmi:type="expression:Expression" xmi:id="_KnQaZ_AIEe23Hp0drSdkXA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -417,11 +426,11 @@
                 </children>
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sdTpkfAaEe2pnIEa4TJmiQ"/>
               </children>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KnQajvAIEe23Hp0drSdkXA" x="232" y="62"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KnQajvAIEe23Hp0drSdkXA" x="99" y="43"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_G_UvsPAbEe24POuEIey1fQ" type="3027" element="_G_PQIPAbEe24POuEIey1fQ" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_G_VWwPAbEe24POuEIey1fQ" type="5017"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G_UvsfAbEe24POuEIey1fQ" x="230" y="179" width="120" height="60"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_G_UvsfAbEe24POuEIey1fQ" x="118" y="157" width="120" height="60"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_H7HuwvAJEe23Hp0drSdkXA"/>
