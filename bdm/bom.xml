@@ -21,6 +21,7 @@
                 <field type="LOCALDATE" length="255" name="fechaCompra" nullable="false" collection="false"/>
                 <field type="BOOLEAN" length="255" name="garantia" nullable="true" collection="false"/>
                 <field type="LONG" length="255" name="solicitanteId" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="reclamacion" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries>
