@@ -42,6 +42,7 @@
                 <field type="DOUBLE" length="255" name="precio" nullable="false" collection="false"/>
                 <field type="LOCALDATE" length="255" name="fechaPedido" nullable="true" collection="false"/>
                 <field type="BOOLEAN" length="255" name="stock" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="clienteId" nullable="false" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries>
