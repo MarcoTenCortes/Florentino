@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "formularioAceptacionGarantia",
   "name" : "formularioAceptacionGarantia",
-  "lastUpdate" : 1683860641053,
+  "lastUpdate" : 1684010128443,
   "rows" : [
     [
       {
@@ -353,7 +353,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "{{solicitante.firstname}}\n{{solicitante.lastname}}"
+                          "value" : "{{solicitud.solicitanteId}}"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -389,9 +389,9 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
-                  "md" : 6,
+                  "xs" : 2,
+                  "sm" : 2,
+                  "md" : 2,
                   "lg" : 6
                 },
                 "propertyValues" : {
@@ -481,9 +481,9 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
-                  "md" : 6,
+                  "xs" : 6,
+                  "sm" : 3,
+                  "md" : 2,
                   "lg" : 6
                 },
                 "propertyValues" : {
@@ -709,13 +709,6 @@
       "type" : "urlparameter",
       "value" : [
         "id"
-      ],
-      "exposed" : false
-    },
-    "solicitante" : {
-      "type" : "url",
-      "value" : [
-        "../API/identity/user{{solicitud.solicitanteId}}"
       ],
       "exposed" : false
     }

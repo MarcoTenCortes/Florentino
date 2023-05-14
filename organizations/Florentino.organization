@@ -98,8 +98,8 @@
     <role name="cliente">
       <displayName>Cliente</displayName>
     </role>
-    <role name="recepcionista">
-      <displayName>Recepcionista</displayName>
+    <role name="dependiente">
+      <displayName>Dependiente</displayName>
     </role>
     <role name="encargado.almacen">
       <displayName>Encargado de almacén</displayName>
@@ -124,16 +124,16 @@
     <group name="florentino">
       <displayName>Florentino</displayName>
     </group>
-    <group name="cocina" parentPath="/florentino/Grupo1">
+    <group name="cocina" parentPath="/florentino/Empleados">
       <displayName>Instalación de cocinas</displayName>
     </group>
-    <group name="ventas" parentPath="/florentino/Grupo1">
+    <group name="ventas" parentPath="/florentino/Empleados">
       <displayName>Ventas</displayName>
     </group>
     <group name="proveedores" parentPath="/florentino">
       <displayName>Proveedores</displayName>
     </group>
-    <group name="Grupo1" parentPath="/florentino">
+    <group name="Empleados" parentPath="/florentino">
       <displayName>Empleados</displayName>
     </group>
   </groups>
@@ -141,31 +141,32 @@
     <membership>
       <userName>carlos.ramirez</userName>
       <roleName>gerente</roleName>
-      <groupName>florentino</groupName>
+      <groupName>empleado</groupName>
+      <groupParentPath>/empleado</groupParentPath>
     </membership>
     <membership>
       <userName>fausto.cuellar</userName>
-      <roleName>recepcionista</roleName>
-      <groupName>empleado</groupName>
-      <groupParentPath>/empleado</groupParentPath>
+      <roleName>dependiente</roleName>
+      <groupName>ventas</groupName>
+      <groupParentPath>/florentino/Empleados</groupParentPath>
     </membership>
     <membership>
       <userName>feliciana.cuervo</userName>
-      <roleName>recepcionista</roleName>
-      <groupName>empleado</groupName>
-      <groupParentPath>/empleado</groupParentPath>
+      <roleName>dependiente</roleName>
+      <groupName>ventas</groupName>
+      <groupParentPath>/florentino/Empleados</groupParentPath>
     </membership>
     <membership>
       <userName>gabriela.larrañaga</userName>
       <roleName>marmolista</roleName>
       <groupName>cocina</groupName>
-      <groupParentPath>/florentino/Grupo1</groupParentPath>
+      <groupParentPath>/florentino/Empleados</groupParentPath>
     </membership>
     <membership>
       <userName>piedad.miro</userName>
-      <roleName>recepcionista</roleName>
-      <groupName>cocina</groupName>
-      <groupParentPath>/florentino/Grupo1</groupParentPath>
+      <roleName>dependiente</roleName>
+      <groupName>ventas</groupName>
+      <groupParentPath>/florentino/Empleados</groupParentPath>
     </membership>
     <membership>
       <userName>prudencio.mayo</userName>
@@ -182,22 +183,26 @@
     <membership>
       <userName>victoria.puente</userName>
       <roleName>cliente</roleName>
-      <groupName>florentino</groupName>
+      <groupName>clientes</groupName>
+      <groupParentPath>/florentino</groupParentPath>
     </membership>
     <membership>
       <userName>laura.gomez</userName>
       <roleName>cliente</roleName>
-      <groupName>florentino</groupName>
+      <groupName>clientes</groupName>
+      <groupParentPath>/florentino</groupParentPath>
     </membership>
     <membership>
       <userName>palma.rodriguez</userName>
       <roleName>cliente</roleName>
-      <groupName>florentino</groupName>
+      <groupName>clientes</groupName>
+      <groupParentPath>/florentino</groupParentPath>
     </membership>
     <membership>
       <userName>alicia.rodriguez</userName>
       <roleName>cliente</roleName>
-      <groupName>florentino</groupName>
+      <groupName>clientes</groupName>
+      <groupParentPath>/florentino</groupParentPath>
     </membership>
   </memberships>
 </organization:Organization>

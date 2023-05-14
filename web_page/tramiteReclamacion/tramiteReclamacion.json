@@ -2,7 +2,7 @@
   "modelVersion" : "2.3",
   "id" : "tramiteReclamacion",
   "name" : "tramiteReclamacion",
-  "lastUpdate" : 1683863804350,
+  "lastUpdate" : 1684011631313,
   "rows" : [
     [
       {
@@ -117,7 +117,16 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : { },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
         "reference" : "3510accc-cd59-4c50-9db4-9388399fee23",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
@@ -369,8 +378,8 @@
                 "type" : "component",
                 "dimension" : {
                   "md" : 6,
-                  "sm" : 12,
-                  "xs" : 12,
+                  "sm" : 2,
+                  "xs" : 2,
                   "lg" : 6
                 },
                 "propertyValues" : {
@@ -387,11 +396,11 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "danger"
+                    "value" : "primary"
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Rechazar"
+                    "value" : "Aceptar"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -468,8 +477,8 @@
               {
                 "type" : "component",
                 "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
+                  "xs" : 8,
+                  "sm" : 2,
                   "md" : 6,
                   "lg" : 6
                 },
@@ -492,7 +501,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Reclamar"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -500,7 +509,7 @@
                   },
                   "buttonStyle" : {
                     "type" : "constant",
-                    "value" : "success"
+                    "value" : "warning"
                   },
                   "action" : {
                     "type" : "constant",

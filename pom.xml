@@ -5,7 +5,7 @@
   <groupId>com.company</groupId>
   <artifactId>florentino</artifactId>
   <version>0.0.1</version>
-  <name>Florentino SL</name>
+  <name>Florentino</name>
   <properties>
     <bonita.runtime.version>7.15.0</bonita.runtime.version>
     <maven-install-plugin.version>3.0.0-M1</maven-install-plugin.version>
@@ -117,6 +117,11 @@
       <groupId>org.bonitasoft.actorfilter</groupId>
       <artifactId>bonita-actorfilter-same-task-user</artifactId>
       <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.bonitasoft.connectors</groupId>
+      <artifactId>bonita-connector-database</artifactId>
+      <version>2.0.3</version>
     </dependency>
     <dependency>
       <groupId>com.company.model</groupId>
