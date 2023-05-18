@@ -209,7 +209,7 @@
             <condition xmi:type="expression:Expression" xmi:id="_rRM3oPBuEe2RtY5ISkMJUg" name="2 días: 00:00:00" content="172800000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
           </BoundaryIntermediateEvents>
           <formMapping xmi:type="process:FormMapping" xmi:id="_f7Y1-vBuEe2RtY5ISkMJUg">
-            <targetForm xmi:type="expression:Expression" xmi:id="_ZzU8cPB3Ee2RtY5ISkMJUg" name="tramiteReclamacion" content="844f53f9-0de0-4de8-a009-82e428f6bfec" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_ZzU8cPB3Ee2RtY5ISkMJUg" name="tramiteValidacionReclamacion" content="844f53f9-0de0-4de8-a009-82e428f6bfec" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <filters xmi:type="process:ActorFilter" xmi:id="_2ehyEPB2Ee2RtY5ISkMJUg" name="Usuario" definitionId="bonita-actorfilter-single-user" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_2ehyEfB2Ee2RtY5ISkMJUg" definitionId="bonita-actorfilter-single-user" version="1.0.0">
@@ -471,14 +471,14 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_G_YaEfAbEe24POuEIey1fQ"/>
         <condition xmi:type="expression:Expression" xmi:id="_G_YaEvAbEe24POuEIey1fQ" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_8oKDwPBrEe2RtY5ISkMJUg" target="_6G8NMPAIEe23Hp0drSdkXA" source="_6WHIoPBrEe2RtY5ISkMJUg" isDefault="true">
+      <connections xmi:type="process:SequenceFlow" xmi:id="_8oKDwPBrEe2RtY5ISkMJUg" name="No" target="_6G8NMPAIEe23Hp0drSdkXA" source="_6WHIoPBrEe2RtY5ISkMJUg" isDefault="true">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_8oKq0PBrEe2RtY5ISkMJUg"/>
         <condition xmi:type="expression:Expression" xmi:id="_8oKq0fBrEe2RtY5ISkMJUg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_9TCMwPBrEe2RtY5ISkMJUg" name="Si" target="_KnQaV_AIEe23Hp0drSdkXA" source="_6WHIoPBrEe2RtY5ISkMJUg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_9TCMwfBrEe2RtY5ISkMJUg"/>
         <condition xmi:type="expression:Expression" xmi:id="_9TCMwvBrEe2RtY5ISkMJUg" name="newScript()" content="import java.time.LocalDate;&#xD;&#xA;solicitud.fechaCompra >= LocalDate.now().minusYears(1)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_84-4kPBsEe2RtY5ISkMJUg" name="solicitud" dataType="_KnQahPAIEe23Hp0drSdkXA" className="com.company.model.Garantia"/>
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_NBfr4PVdEe2M4u9-WBJaOw" name="solicitud" dataType="_KnQahPAIEe23Hp0drSdkXA" className="com.company.model.Garantia"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_gpQokPBuEe2RtY5ISkMJUg" target="_f7Y18PBuEe2RtY5ISkMJUg" source="_6G8NMPAIEe23Hp0drSdkXA">
@@ -491,7 +491,7 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_S8fhIPBvEe2RtY5ISkMJUg" target="_GveKoPBvEe2RtY5ISkMJUg" source="_f7Y18PBuEe2RtY5ISkMJUg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_S8fhIfBvEe2RtY5ISkMJUg"/>
-        <condition xmi:type="expression:Expression" xmi:id="_S8fhIvBvEe2RtY5ISkMJUg" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_S8fhIvBvEe2RtY5ISkMJUg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_UNTBsPBvEe2RtY5ISkMJUg" name="No" target="_flUTMPAJEe23Hp0drSdkXA" source="_GveKoPBvEe2RtY5ISkMJUg" isDefault="true">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_UNTBsfBvEe2RtY5ISkMJUg"/>
@@ -751,7 +751,7 @@
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_8oL48PBrEe2RtY5ISkMJUg" type="4001" element="_8oKDwPBrEe2RtY5ISkMJUg" source="_6WkboPBrEe2RtY5ISkMJUg" target="_6G80QPAIEe23Hp0drSdkXA" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_8oL48_BrEe2RtY5ISkMJUg" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_8oL49PBrEe2RtY5ISkMJUg" y="-10"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8oL49PBrEe2RtY5ISkMJUg" x="-3" y="-184"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_8oL48fBrEe2RtY5ISkMJUg" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8oL48vBrEe2RtY5ISkMJUg" points="[-2, -8, -560, 22]$[243, -8, -315, 22]$[243, -27, -315, 3]$[494, -27, -64, 3]"/>
